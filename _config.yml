@@ -16,3 +16,12 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /dist/main.js
+
+# background img url
+backgroundImg: '/img/background.jpg'
+
+# favicon img url
+faviconImg: '/img/favicon.ico'
+
+# author img url
+authorImg: '/img/author.jpg'

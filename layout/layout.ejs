@@ -14,6 +14,9 @@ pageTitle += ' [ ' + config.title + ' ]';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="key" content="blog">
+  <meta name="description" content="This is fanhua5's blog.">
+  <link rel="shortcut icon" href="<%=theme.faviconImg%>">
   <title><%=pageTitle%></title>
   <!-- stylesheet -->
   <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
@@ -24,8 +27,9 @@ pageTitle += ' [ ' + config.title + ' ]';
 </head>
 <body>
 
-<!-- header -->
-<header id="header">
+<div class="blog-wrap" style="background-image: url(<%=theme.backgroundImg%>);">
+  <!-- header -->
+<header class="header">
   <div class="nav-wrap">
     <div class="nav__menu">
       <% Object.keys(theme.menu).forEach(key => { %>
@@ -38,21 +42,30 @@ pageTitle += ' [ ' + config.title + ' ]';
 </header>
 
 <!-- main -->
-<main id="main">
-  <%- body %>
+<main class="main">
+  <div class="main-wrap">
+    <%- body %>
+  </div>
 </main>
 
 <!-- aside -->
-<aside id="aside">
-  作者：<%=config.author%>
+<aside class="aside">
+  <div class="aside-wrap">
+    <div class="author-info">
+      <img src="<%-theme.authorImg%>" alt="fanhua5" class="author-info__avatar">
+      <div class="author-info__name"><%=config.author%></div>
+    </div>
+    <%=site.posts.length%>
+    <%=site.categories.length%>
+    <%=site.tags.length%>
+  </div>
 </aside>
 
 <!-- footer -->
-<footer id="footer">
-  Site by <%=config.author%> using
-    <a href="http://hexo.io">hexo blog framework</a>.
-    <br>
-    <a href="<%=config.root%>">首页</a>
+<footer class="footer">
+  <div class="footer-wrap">
+    用自己的双脚丈量土地，将未知变为知识。
+  </div>
 </footer>
 
 <!-- scripts -->
@@ -62,6 +75,7 @@ pageTitle += ' [ ' + config.title + ' ]';
     <script src="<%=url%>"></script>
   <% }); %>
 <% } %>
+</div>
 
 </body>
 </html>

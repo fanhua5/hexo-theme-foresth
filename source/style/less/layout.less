@@ -1,14 +1,17 @@
-@layout-pc-header-height: 60px;
+@layout-pc-header-height: 80px;
+
 @layout-pc-footer-height: 50px;
-@layout-pc-aside-top: calc(@layout-pc-header-height + 20px);
+
+@layout-pc-aside-top: calc(@layout-pc-header-height + 40px);
 @layout-pc-aside-left: 80px;
 @layout-pc-aside-width: 300px;
 @layout-pc-aside-height: 300px;
-@layout-pc-main-margin-left: calc(@layout-pc-aside-left + @layout-pc-aside-width + 60px);
-@layout-pc-main-margin-top: 20px;
+
+@layout-pc-main-padding-left: calc(@layout-pc-aside-left + @layout-pc-aside-width + 60px);
+@layout-pc-main-padding-top: 40px;
 @layout-pc-main-height: calc(100vh - @layout-pc-aside-top);
 
-#header {
+.header {
   position: sticky;
   top: 0;
   display: flex;
@@ -17,13 +20,13 @@
   height: @layout-pc-header-height;
 }
 
-#main {
+.main {
   min-height: @layout-pc-main-height;
-  margin-left: @layout-pc-main-margin-left;
-  margin-top: @layout-pc-main-margin-top;
+  padding-left: @layout-pc-main-padding-left;
+  padding-top: @layout-pc-main-padding-top;
 }
 
-#aside {
+.aside {
   position: fixed;
   width: @layout-pc-aside-width;
   height: @layout-pc-aside-height;
@@ -31,10 +34,9 @@
   left: @layout-pc-aside-left;
 }
 
-#footer {
+.footer {
   height: @layout-pc-footer-height;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
 }
