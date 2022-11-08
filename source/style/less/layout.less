@@ -1,0 +1,40 @@
+@layout-pc-header-height: 60px;
+@layout-pc-footer-height: 50px;
+@layout-pc-aside-top: calc(@layout-pc-header-height + 20px);
+@layout-pc-aside-left: 80px;
+@layout-pc-aside-width: 300px;
+@layout-pc-aside-height: 300px;
+@layout-pc-main-margin-left: calc(@layout-pc-aside-left + @layout-pc-aside-width + 60px);
+@layout-pc-main-margin-top: 20px;
+@layout-pc-main-height: calc(100vh - @layout-pc-aside-top);
+
+#header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: @layout-pc-header-height;
+}
+
+#main {
+  min-height: @layout-pc-main-height;
+  margin-left: @layout-pc-main-margin-left;
+  margin-top: @layout-pc-main-margin-top;
+}
+
+#aside {
+  position: fixed;
+  width: @layout-pc-aside-width;
+  height: @layout-pc-aside-height;
+  top: @layout-pc-aside-top;
+  left: @layout-pc-aside-left;
+}
+
+#footer {
+  height: @layout-pc-footer-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+}

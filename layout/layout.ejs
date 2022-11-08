@@ -1,0 +1,67 @@
+
+<%
+var pageTitle = page.title || config.subtitle || '';
+if (is_archive()) pageTitle = '归档';
+if (is_tag()) pageTitle = '标签: ' + page.tag;
+if (is_category()) pageTitle = '分类: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' [ ' + config.title + ' ]';
+%>
+
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=pageTitle%></title>
+  <!-- stylesheet -->
+  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <% theme.stylesheets.forEach(url => { %>
+      <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+  <% } %>
+</head>
+<body>
+
+<!-- header -->
+<header id="header">
+  <div class="nav-wrap">
+    <div class="nav__menu">
+      <% Object.keys(theme.menu).forEach(key => { %>
+        <div class="nav__menu-btn">
+          <a href="<%=theme.menu[key]%>"><%=key%></a>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</header>
+
+<!-- main -->
+<main id="main">
+  <%- body %>
+</main>
+
+<!-- aside -->
+<aside id="aside">
+  作者：<%=config.author%>
+</aside>
+
+<!-- footer -->
+<footer id="footer">
+  Site by <%=config.author%> using
+    <a href="http://hexo.io">hexo blog framework</a>.
+    <br>
+    <a href="<%=config.root%>">首页</a>
+</footer>
+
+<!-- scripts -->
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+  <!-- scripts list from theme config.yml -->
+  <% theme.scripts.forEach(url => { %>
+    <script src="<%=url%>"></script>
+  <% }); %>
+<% } %>
+
+</body>
+</html>
