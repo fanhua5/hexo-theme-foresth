@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="nav-wrap">
+    <div class="nav__menu">
+      <% Object.keys(theme.menu).forEach(key => { %>
+        <div class="nav__menu-btn">
+          <%-partial('components/link', {
+            props: {
+              href: theme.menu[key]
+            }, 
+            content: key
+          })%>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</header>

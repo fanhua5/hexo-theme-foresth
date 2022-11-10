@@ -28,18 +28,9 @@ pageTitle += ' [ ' + config.title + ' ]';
 <body>
 
 <div class="blog-wrap" style="background-image: url(<%=theme.backgroundImg%>);">
-  <!-- header -->
-<header class="header">
-  <div class="nav-wrap">
-    <div class="nav__menu">
-      <% Object.keys(theme.menu).forEach(key => { %>
-        <div class="nav__menu-btn">
-          <a href="<%=theme.menu[key]%>"><%=key%></a>
-        </div>
-      <% }); %>
-    </div>
-  </div>
-</header>
+
+<!-- header -->
+<%-partial('components/header')%>
 
 <!-- main -->
 <main class="main">
@@ -48,29 +39,15 @@ pageTitle += ' [ ' + config.title + ' ]';
   </div>
 </main>
 
-<!-- aside -->
-<aside class="aside">
-  <div class="aside-wrap">
-    <div class="author-info">
-      <img src="<%-theme.authorImg%>" alt="fanhua5" class="author-info__avatar">
-      <div class="author-info__name"><%=config.author%></div>
-    </div>
-    <%=site.posts.length%>
-    <%=site.categories.length%>
-    <%=site.tags.length%>
-  </div>
-</aside>
+<!-- sidebar -->
+<%-partial('components/sidebar')%>
 
 <!-- footer -->
-<footer class="footer">
-  <div class="footer-wrap">
-    用自己的双脚丈量土地，将未知变为知识。
-  </div>
-</footer>
+<%-partial('components/footer')%>
+
 
 <!-- scripts -->
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-  <!-- scripts list from theme config.yml -->
   <% theme.scripts.forEach(url => { %>
     <script src="<%=url%>"></script>
   <% }); %>

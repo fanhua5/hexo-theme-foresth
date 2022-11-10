@@ -1,15 +1,15 @@
 @layout-pc-header-height: 80px;
 
-@layout-pc-footer-height: 50px;
+@layout-pc-footer-height: 80px;
 
-@layout-pc-aside-top: calc(@layout-pc-header-height + 40px);
-@layout-pc-aside-left: 80px;
-@layout-pc-aside-width: 300px;
-@layout-pc-aside-height: 300px;
+@layout-pc-sidebar-top: calc(@layout-pc-header-height + 40px);
+@layout-pc-sidebar-left: 80px;
+@layout-pc-sidebar-width: 250px;
+@layout-pc-sidebar-height: 300px;
 
-@layout-pc-main-padding-left: calc(@layout-pc-aside-left + @layout-pc-aside-width + 60px);
+@layout-pc-main-padding-left: calc(@layout-pc-sidebar-left + @layout-pc-sidebar-width + 60px);
 @layout-pc-main-padding-top: 40px;
-@layout-pc-main-height: calc(100vh - @layout-pc-aside-top);
+@layout-pc-main-height: calc(100vh - @layout-pc-sidebar-top);
 
 .header {
   position: sticky;
@@ -26,12 +26,12 @@
   padding-top: @layout-pc-main-padding-top;
 }
 
-.aside {
+.sidebar {
   position: fixed;
-  width: @layout-pc-aside-width;
-  height: @layout-pc-aside-height;
-  top: @layout-pc-aside-top;
-  left: @layout-pc-aside-left;
+  width: @layout-pc-sidebar-width;
+  height: @layout-pc-sidebar-height;
+  top: @layout-pc-sidebar-top;
+  left: @layout-pc-sidebar-left;
 }
 
 .footer {

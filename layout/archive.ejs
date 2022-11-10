@@ -18,34 +18,34 @@ const archivesList = list_archives({ show_count: false });
       <br>
     <% } %>
 
-    <aside>
+    <sidebar>
       <h2>Categories</h2>
       <% if (categoriesList !== "") { %>
         <%-categoriesList%>
       <% } else { %>
         <p>None.</p>
       <% } %>
-    </aside>
+    </sidebar>
     <br>
 
-    <aside>
+    <sidebar>
       <h2>标签</h2>
       <% if (tagsList !== "") { %>
         <%-tagsList%>
       <% } else { %>
         <p>None.</p>
       <% } %>
-    </aside>
+    </sidebar>
     <br>
 
-    <aside>
+    <sidebar>
       <h2>归档</h2>
       <% if (archivesList !== "") { %>
         <%-archivesList%>
       <% } else { %>
         <p>None.</p>
       <% } %>
-    </aside>
+    </sidebar>
 
   </div>
 <% } else { %>
@@ -63,8 +63,10 @@ const archivesList = list_archives({ show_count: false });
     </div>
   <% }) %>
 
-  <div id="paginator">
-    <%-paginator()%>
+  <div class="paginator">
+    <div class="paginator-wrap">
+      <%-paginator()%>
+    </div>
   </div>
 
 <% } %>

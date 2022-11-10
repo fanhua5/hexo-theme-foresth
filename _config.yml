@@ -2,12 +2,14 @@
 # html lang
 language: zh
 
+# github url
+github: https://github.com/fanhua5
+
 # main menu navigation
 menu:
-  Home: /
-  # About: /about
-  # Contact: /contact
-  Archives: /archives
+  首页: /
+  关于: /about
+  归档: /archives
 
 # stylesheets loaded in the <head>
 stylesheets:

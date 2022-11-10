@@ -1,0 +1,21 @@
+<aside class="sidebar">
+  <div class="sidebar-wrap">
+    <div class="author-info">
+      <img src="<%-theme.authorImg%>" alt="fanhua5" class="author-info__avatar">
+      <div class="author-info__name">
+        <%-partial('components/link', {
+          props: {
+            href: theme.github
+          }, 
+          content: config.author
+        })%>
+      </div>
+    </div>
+    <div class="post-info">
+      <span class="number"></span>
+      <%=site.posts.length%>
+      <%=site.categories.length%>
+      <%=site.tags.length%>
+    </div>
+  </div>
+</aside>
