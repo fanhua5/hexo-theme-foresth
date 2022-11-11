@@ -8,7 +8,7 @@ github: https://github.com/fanhua5
 # main menu navigation
 menu:
   首页: /
-  关于: /about
+  # 关于: /about
   归档: /archives
 
 # stylesheets loaded in the <head>

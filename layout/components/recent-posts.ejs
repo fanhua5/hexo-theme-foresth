@@ -13,14 +13,13 @@
         </h2>
         <div class="recent-posts__item-info">
           <div class="recent-posts__item-post-time">
-            发布时间：<%=date(post.date)%>
+            发布于：<%=date(post.date)%>
           </div>
           <div class="recent-posts__item-post-time">
-            编辑时间：<%=date(post.updated)%>
+            编辑于：<%=date(post.updated)%>
           </div>
         </div>
         <div class="recent-posts__item-description">
-          <%=stringCut(post.content, 5)%>
         </div>
       </div>
     <% }); %>

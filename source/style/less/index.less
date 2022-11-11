@@ -2,7 +2,7 @@
  * @Author: fanhua 
  * @Date: 2022-11-08 10:54:06 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-11 21:15:26
+ * @Last Modified time: 2022-11-11 21:54:42
  */
 // Index file
 @import "./reset.less";
@@ -25,12 +25,12 @@
 @theme-pc-post-h-color: #000000;
 @theme-pc-post-h-font-weight: 600;
 
-@theme-pc-post-h1-font-size: 32px;
-@theme-pc-post-h2-font-size: 28px;
-@theme-pc-post-h3-font-size: 24px;
-@theme-pc-post-h4-font-size: 20px;
+@theme-pc-post-h1-font-size: 34px;
+@theme-pc-post-h2-font-size: 30px;
+@theme-pc-post-h3-font-size: 26px;
+@theme-pc-post-h4-font-size: 22px;
 @theme-pc-post-h5-font-size: 18px;
-@theme-pc-post-h6-font-size: 16px;
+@theme-pc-post-h6-font-size: 14px;
 
 @theme-pc-post-p-padding: 10px 0;
 
@@ -67,17 +67,33 @@
   }
 
   .author-info {
-    padding: 40px;
+    padding: 40px 40px 0 40px;
     &__avatar {
       width: 100px;
       height: 100px;
       display: block;
       margin: 0 auto;
       border-radius: 50px;
+      user-select: none;
     }
     &__name {
-      margin-top: 20px;
-      text-align: center;
+      width: fit-content;
+      max-width: 100%;
+      margin: 20px auto 0 auto;
+      font-weight: 600;
+    }
+  }
+  .post-info{
+    width: fit-content;
+    max-width: 100%;
+    margin: 10px auto 0px auto;
+    padding-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    &__number{
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
     }
   }
 }
@@ -94,7 +110,7 @@
   }
   &__menu {
     width: fit-content;
-    margin-left: 500px;
+    margin-left: 26vw;
     display: flex;
     color: @theme-pc-header-menu-color;
   }
@@ -120,12 +136,17 @@
     }
   }
   &__item-title {
+    width: fit-content;
     max-width: 100%;
+    margin: 0 auto;
     font-size: 24px;
-    .text-overflow-ellipsis()
   }
   &__item-info {
-    margin-top: 20px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 10px auto 0 auto;
+    display: flex;
+    gap: 40px;
     font-size: 12px;
   }
 }
@@ -157,7 +178,8 @@
 // post
 .post {
   &-wrap {
-    width: 100%;
+    width: 1000px;
+    max-width: 1000px;
     padding: 40px 40px;
     background-color: @theme-pc-card-bg-color;
     border-radius: @theme-pc-card-border-radius;
@@ -201,7 +223,7 @@
     margin: 10px 0;
     padding: 5px 10px;
     background-color: #a1cedd73;
-    border-radius: 12px;
+    border-radius: @theme-pc-card-border-radius;
     font-family: Arial, Helvetica, sans-serif;
     td.gutter {
       user-select: none;
@@ -225,9 +247,10 @@
   blockquote{
     margin: 10px 0;
     padding: 4px;
-    background-color: #a1cedd73;
+    background-color: #b4dda173;
+    border-radius: @theme-pc-card-border-radius;
     > p{
-      padding: 4px 2px;
+      padding: 4px 12px;
     }
   }
 }

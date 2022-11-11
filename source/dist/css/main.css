@@ -118,7 +118,7 @@
  * @Author: fanhua 
  * @Date: 2022-11-08 10:54:06 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-11 21:15:26
+ * @Last Modified time: 2022-11-11 21:54:42
  */
 /*
  * @Author: fanhua 
@@ -183,7 +183,7 @@ blockquote {
 .main {
   max-width: 70vw;
   min-height: calc(100vh - calc(4vw + 2vw));
-  padding-left: calc(4vw + 13vw + 3vw);
+  padding-left: calc(8vw + 13vw + 3vw);
   padding-top: 2vw;
 }
 .sidebar {
@@ -191,7 +191,7 @@ blockquote {
   width: 13vw;
   height: 16vw;
   top: calc(4vw + 2vw);
-  left: 4vw;
+  left: 8vw;
 }
 .footer {
   height: 4vw;
@@ -244,7 +244,7 @@ blockquote {
   background: #f4f5f7e9;
 }
 .sidebar .author-info {
-  padding: 40px;
+  padding: 40px 40px 0 40px;
 }
 .sidebar .author-info__avatar {
   width: 100px;
@@ -252,10 +252,26 @@ blockquote {
   display: block;
   margin: 0 auto;
   border-radius: 50px;
+  user-select: none;
 }
 .sidebar .author-info__name {
-  margin-top: 20px;
-  text-align: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 20px auto 0 auto;
+  font-weight: 600;
+}
+.sidebar .post-info {
+  width: fit-content;
+  max-width: 100%;
+  margin: 10px auto 0px auto;
+  padding-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+.sidebar .post-info__number {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
 }
 .nav-wrap {
   user-select: none;
@@ -267,7 +283,7 @@ blockquote {
 }
 .nav__menu {
   width: fit-content;
-  margin-left: 500px;
+  margin-left: 26vw;
   display: flex;
   color: #f4f5f7;
 }
@@ -291,14 +307,17 @@ blockquote {
   margin-top: 30px;
 }
 .recent-posts__item-title {
+  width: fit-content;
   max-width: 100%;
+  margin: 0 auto;
   font-size: 24px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .recent-posts__item-info {
-  margin-top: 20px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 10px auto 0 auto;
+  display: flex;
+  gap: 40px;
   font-size: 12px;
 }
 .animation-link {
@@ -322,7 +341,8 @@ blockquote {
   animation-fill-mode: forwards;
 }
 .post-wrap {
-  width: 100%;
+  width: 1000px;
+  max-width: 1000px;
   padding: 40px 40px;
   background-color: #f4f5f7e9;
   border-radius: 6px;
@@ -339,22 +359,22 @@ blockquote {
   color: #000000;
 }
 .post h1 {
-  font-size: 32px;
+  font-size: 34px;
 }
 .post h2 {
-  font-size: 28px;
+  font-size: 30px;
 }
 .post h3 {
-  font-size: 24px;
+  font-size: 26px;
 }
 .post h4 {
-  font-size: 20px;
+  font-size: 22px;
 }
 .post h5 {
   font-size: 18px;
 }
 .post h6 {
-  font-size: 16px;
+  font-size: 14px;
 }
 .post p {
   max-width: 100%;
@@ -366,7 +386,7 @@ blockquote {
   margin: 10px 0;
   padding: 5px 10px;
   background-color: #a1cedd73;
-  border-radius: 12px;
+  border-radius: 6px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .post figure td.gutter {
@@ -390,9 +410,10 @@ blockquote {
 .post blockquote {
   margin: 10px 0;
   padding: 4px;
-  background-color: #a1cedd73;
+  background-color: #b4dda173;
+  border-radius: 6px;
 }
 .post blockquote > p {
-  padding: 4px 2px;
+  padding: 4px 12px;
 }
 
