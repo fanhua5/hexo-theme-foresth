@@ -3,6 +3,7 @@
     <div class="nav__menu">
       <% Object.keys(theme.menu).forEach(key => { %>
         <div class="nav__menu-btn">
+          <i class="iconfont icon-guidang"></i>
           <%-partial('components/link', {
             props: {
               href: theme.menu[key]
