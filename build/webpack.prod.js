@@ -2,12 +2,12 @@
  * @Author: fanhua 
  * @Date: 2022-11-08 13:41:29 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-08 14:23:09
+ * @Last Modified time: 2022-11-11 09:20:35
  */
 const path = require("path");
 const MiniCssPlugin = require("mini-css-extract-plugin")
 module.exports = {
-  entry: './source/js/index.js',
+  entry: './scripts/index.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, '../source/dist'),
