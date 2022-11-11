@@ -2,6 +2,18 @@
  * @Author: fanhua 
  * @Date: 2022-11-08 10:53:05 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-08 14:08:49
+ * @Last Modified time: 2022-11-11 21:21:26
  */
 // Global mixins
+.text-overflow-ellipsis(@line: 1) when (@line = 1) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.text-overflow-ellipsis(@line: 1) when (@line > 1) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: @line;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

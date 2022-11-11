@@ -118,7 +118,7 @@
  * @Author: fanhua 
  * @Date: 2022-11-08 10:54:06 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-11 21:07:38
+ * @Last Modified time: 2022-11-11 21:15:26
  */
 /*
  * @Author: fanhua 
@@ -203,7 +203,7 @@ blockquote {
  * @Author: fanhua 
  * @Date: 2022-11-08 10:53:05 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-08 14:08:49
+ * @Last Modified time: 2022-11-11 21:21:26
  */
 @keyframes link-decoration {
   0% {
@@ -282,6 +282,7 @@ blockquote {
 }
 .recent-posts__item {
   padding: 40px 60px;
+  max-width: 100%;
   border-radius: 6px;
   background: #f4f5f7e9;
   cursor: pointer;
@@ -290,7 +291,11 @@ blockquote {
   margin-top: 30px;
 }
 .recent-posts__item-title {
+  max-width: 100%;
   font-size: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .recent-posts__item-info {
   margin-top: 20px;

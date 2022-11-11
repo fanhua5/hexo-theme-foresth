@@ -2,7 +2,7 @@
  * @Author: fanhua 
  * @Date: 2022-11-08 10:54:06 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-11 21:07:38
+ * @Last Modified time: 2022-11-11 21:15:26
  */
 // Index file
 @import "./reset.less";
@@ -111,6 +111,7 @@
   flex-direction: column;
   &__item {
     padding: 40px 60px;
+    max-width: 100%;
     border-radius: @theme-pc-card-border-radius;
     background: @theme-pc-card-bg-color;
     cursor: pointer;
@@ -119,7 +120,9 @@
     }
   }
   &__item-title {
+    max-width: 100%;
     font-size: 24px;
+    .text-overflow-ellipsis()
   }
   &__item-info {
     margin-top: 20px;
