@@ -2,13 +2,13 @@
  * @Author: fanhua 
  * @Date: 2022-11-08 10:54:06 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-09 12:19:19
+ * @Last Modified time: 2022-11-11 16:50:29
  */
 /*
  * @Author: fanhua 
  * @Date: 2022-11-08 10:52:12 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-08 16:21:10
+ * @Last Modified time: 2022-11-11 16:44:43
  */
 ::-webkit-scrollbar {
   width: 8px;
@@ -44,6 +44,12 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+p {
+  margin: 0;
+}
+blockquote {
+  margin: 0;
+}
 /*
  * @Author: fanhua 
  * @Date: 2022-11-08 10:53:44 
@@ -56,22 +62,23 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: 4vw;
 }
 .main {
-  min-height: calc(100vh - calc(80px + 40px));
-  padding-left: calc(80px + 250px + 60px);
-  padding-top: 40px;
+  max-width: 70vw;
+  min-height: calc(100vh - calc(4vw + 2vw));
+  padding-left: calc(4vw + 13vw + 3vw);
+  padding-top: 2vw;
 }
 .sidebar {
   position: fixed;
-  width: 250px;
-  height: 300px;
-  top: calc(80px + 40px);
-  left: 80px;
+  width: 13vw;
+  height: 16vw;
+  top: calc(4vw + 2vw);
+  left: 4vw;
 }
 .footer {
-  height: 80px;
+  height: 4vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,12 +192,86 @@ h6 {
   left: 0;
   bottom: -2px;
   height: 2px;
-  content: '';
+  content: "";
   background: transparent;
 }
 .animation-link:hover::after {
   background: #8feaf8;
   animation: link-decoration 0.2s ease-in-out;
   animation-fill-mode: forwards;
+}
+.post-wrap {
+  width: 100%;
+  padding: 40px 40px;
+  background-color: #f4f5f7e9;
+  border-radius: 6px;
+}
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+  max-width: 100%;
+  margin: 10px 0;
+  font-weight: 600;
+  color: #000000;
+}
+.post h1 {
+  font-size: 32px;
+}
+.post h2 {
+  font-size: 28px;
+}
+.post h3 {
+  font-size: 24px;
+}
+.post h4 {
+  font-size: 20px;
+}
+.post h5 {
+  font-size: 18px;
+}
+.post h6 {
+  font-size: 16px;
+}
+.post p {
+  max-width: 100%;
+  font-size: 16px;
+  word-break: break-word;
+  padding: 10px 0;
+}
+.post figure {
+  margin: 10px 0;
+  padding: 5px 10px;
+  background-color: #a1cedd73;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.post figure td.gutter {
+  user-select: none;
+}
+.post figure td.code {
+  padding-left: 10px;
+}
+.post figure pre {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+.post a {
+  color: #08c;
+}
+.post hr {
+  margin: 10px 0;
+  background-color: rgba(0, 170, 255, 0.817);
+}
+.post blockquote {
+  margin: 10px 0;
+  padding: 4px;
+  background-color: #a1cedd73;
+}
+.post blockquote > p {
+  padding: 4px 2px;
 }
 
