@@ -24,6 +24,7 @@ pageTitle += config.title;
       <link rel="stylesheet" href="<%=url%>">
     <% }); %>
   <% } %>
+  <link rel="stylesheet" href="/style/css/aos.css" />
 </head>
 <body>
 
@@ -47,6 +48,8 @@ pageTitle += config.title;
 
 
 <!-- scripts -->
+<script src="/js/jquery-3.6.1.min.js"></script>
+<script src="/js/aos.js"></script>
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
   <% theme.scripts.forEach(url => { %>
     <script src="<%=url%>"></script>

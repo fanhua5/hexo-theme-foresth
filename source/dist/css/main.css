@@ -179,6 +179,7 @@ blockquote {
   justify-content: center;
   align-items: center;
   height: 4vw;
+  z-index: 2;
 }
 .main {
   max-width: 70vw;
@@ -222,6 +223,16 @@ blockquote {
     width: 100%;
   }
 }
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
 .blog-wrap {
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -233,8 +244,9 @@ blockquote {
 }
 .footer-wrap {
   background-color: transparent;
-  color: #ffffff;
+  color: #c7c7c7;
   font-size: 14px;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .sidebar {
   margin: 0 auto;
@@ -242,6 +254,7 @@ blockquote {
 .sidebar-wrap {
   border-radius: 6px;
   background: #f4f5f7e9;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .sidebar .author-info {
   padding: 40px 40px 0 40px;
