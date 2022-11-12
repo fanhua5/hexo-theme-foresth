@@ -2,7 +2,7 @@
 <% if (page.posts.length > 0) { %>
   <div class="recent-posts">
     <% page.posts.sort('date', -1).limit(10).each(post => { %>
-      <div class="recent-posts__item" data-aos="fade-up" data-aos-offset="200">
+      <div class="recent-posts__item" data-aos="flip-up" data-aos-delay="50">
         <h2 class="recent-posts__item-title">
           <%-partial('components/link', {
             props: {
