@@ -118,7 +118,7 @@
  * @Author: fanhua 
  * @Date: 2022-11-08 10:54:06 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-12 17:34:47
+ * @Last Modified time: 2022-11-13 15:31:57
  */
 /*
  * @Author: fanhua 
@@ -375,21 +375,27 @@ table {
   color: #000000;
 }
 .post h1 {
+  margin: 14px 0;
   font-size: 34px;
 }
 .post h2 {
+  margin: 12px 0;
   font-size: 30px;
 }
 .post h3 {
+  margin: 10px 0;
   font-size: 26px;
 }
 .post h4 {
+  margin: 8px 0;
   font-size: 22px;
 }
 .post h5 {
+  margin: 6px 0;
   font-size: 18px;
 }
 .post h6 {
+  margin: 4px 0;
   font-size: 14px;
 }
 .post p {
@@ -397,27 +403,6 @@ table {
   font-size: 16px;
   word-break: break-word;
   padding: 10px 0;
-}
-.post figure {
-  margin: 10px 0;
-  padding: 8px;
-  background-color: #a1cedd73;
-  border-radius: 6px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.post figure table {
-  padding-left: 10px;
-}
-.post figure td.gutter {
-  user-select: none;
-}
-.post figure td.code {
-  padding-left: 10px;
-}
-.post figure pre {
-  font-size: 16px;
-  line-height: 22px;
-  font-family: Arial, Helvetica, sans-serif !important;
 }
 .post a {
   color: #08c;
@@ -429,7 +414,7 @@ table {
 .post blockquote {
   margin: 10px 0;
   padding: 8px;
-  background-color: #b4dda173;
+  background-color: #c0d6eab3;
   border-radius: 6px;
 }
 .post blockquote > p {

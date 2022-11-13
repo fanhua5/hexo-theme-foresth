@@ -2,7 +2,7 @@
  * @Author: fanhua 
  * @Date: 2022-11-08 10:54:06 
  * @Last Modified by: fanhua
- * @Last Modified time: 2022-11-12 17:34:47
+ * @Last Modified time: 2022-11-13 15:32:17
  */
 // Index file
 @import "./reset.less";
@@ -31,6 +31,13 @@
 @theme-pc-post-h4-font-size: 22px;
 @theme-pc-post-h5-font-size: 18px;
 @theme-pc-post-h6-font-size: 14px;
+
+@theme-ps-post-h1-margin: 14px 0;
+@theme-ps-post-h2-margin: 12px 0;
+@theme-ps-post-h3-margin: 10px 0;
+@theme-ps-post-h4-margin: 8px 0;
+@theme-ps-post-h5-margin: 6px 0;
+@theme-ps-post-h6-margin: 4px 0;
 
 @theme-pc-post-p-padding: 10px 0;
 
@@ -198,21 +205,27 @@
     color: @theme-pc-post-h-color;
   }
   h1 {
+    margin: @theme-ps-post-h1-margin;
     font-size: @theme-pc-post-h1-font-size;
   }
   h2 {
+    margin: @theme-ps-post-h2-margin;
     font-size: @theme-pc-post-h2-font-size;
   }
   h3 {
+    margin: @theme-ps-post-h3-margin;
     font-size: @theme-pc-post-h3-font-size;
   }
   h4 {
+    margin: @theme-ps-post-h4-margin;
     font-size: @theme-pc-post-h4-font-size;
   }
   h5 {
+    margin: @theme-ps-post-h5-margin;
     font-size: @theme-pc-post-h5-font-size;
   }
   h6 {
+    margin: @theme-ps-post-h6-margin;
     font-size: @theme-pc-post-h6-font-size;
   }
   p {
@@ -220,27 +233,6 @@
     font-size: 16px;
     word-break: break-word;
     padding: @theme-pc-post-p-padding;
-  }
-  figure {
-    margin: 10px 0;
-    padding: 8px;
-    background-color: #a1cedd73;
-    border-radius: @theme-pc-card-border-radius;
-    font-family: Arial, Helvetica, sans-serif;
-    table{
-      padding-left: 10px;
-    }
-    td.gutter {
-      user-select: none;
-    }
-    td.code {
-      padding-left: 10px;
-    }
-    pre {
-      font-size: 16px;
-      line-height: 22px;
-      font-family: Arial, Helvetica, sans-serif !important;
-    }
   }
   a {
     color: #08c;
@@ -252,7 +244,7 @@
   blockquote {
     margin: 10px 0;
     padding: 8px;
-    background-color: #b4dda173;
+    background-color: #c0d6eab3;
     border-radius: @theme-pc-card-border-radius;
     > p {
       padding: 4px 12px;
